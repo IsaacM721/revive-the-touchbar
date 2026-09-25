@@ -1,0 +1,11 @@
+name: Effect or feature idea
+description: Suggest a new effect or setting
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+      description: Describe the effect or setting. Links to a reference video are welcome.
+    validations:
+      required: true

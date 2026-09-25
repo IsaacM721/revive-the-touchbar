@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Billing, licenses, and refunds
+    url: mailto:isaacmendezrosario@icloud.com
+    about: Email us. Please keep license keys and payment details out of public issues.
+  - name: Questions and show-and-tell
+    url: https://github.com/IsaacM721/revive-the-touchbar/discussions
+    about: Ask how something works or share your setup.
