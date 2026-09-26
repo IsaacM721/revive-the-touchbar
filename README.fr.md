@@ -33,8 +33,8 @@ Un bouton façon synthétiseur règle la forme des coins, du carré à la pilule
 | Formule | Prix | Ce que vous obtenez |
 | --- | --- | --- |
 | Gratuit | 0 $ | Spectrum Cycle et Matrix, après un essai de 7 jours de tout. |
-| À vie | $9.99 une fois | Tous les effets et tous les réglages, pour toujours. Affiche une petite carte de sponsor. |
-| Mensuel | $1.99 / mois | Tout, sans carte de sponsor. Résiliable à tout moment. |
+| Pro À vie | $9.99 une fois | Tous les effets et tous les réglages, pour toujours. Affiche une petite carte de sponsor. |
+| Pro Mensuel | $1.99 / mois | Tout, sans carte de sponsor. Résiliable à tout moment. |
 
 Les prix s'affichent dans votre devise locale au paiement.
 

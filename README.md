@@ -33,8 +33,8 @@ A synth-style knob sets the corner shape from square to full pill. Sliders contr
 | Plan | Price | What you get |
 | --- | --- | --- |
 | Free | $0 | Spectrum Cycle and Matrix, after a 7-day trial of everything. |
-| Lifetime | $9.99 once | Every effect and every control, forever. Shows a small sponsor card. |
-| Monthly | $1.99 / month | Everything, no sponsor card. Cancel any time. |
+| Pro Lifetime | $9.99 once | Every effect and every control, forever. Shows a small sponsor card. |
+| Pro Monthly | $1.99 / month | Everything, no sponsor card. Cancel any time. |
 
 Prices are shown in your local currency at checkout.
 

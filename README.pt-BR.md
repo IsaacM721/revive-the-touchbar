@@ -33,8 +33,8 @@ Um botão estilo sintetizador define o formato dos cantos, de quadrado a pílula
 | Plano | Preço | O que inclui |
 | --- | --- | --- |
 | Grátis | $0 | Spectrum Cycle e Matrix, depois de um teste de 7 dias com tudo. |
-| Vitalício | $9.99 uma vez | Todos os efeitos e controles, para sempre. Mostra um pequeno cartão de patrocinador. |
-| Mensal | $1.99 / mês | Tudo, sem cartão de patrocinador. Cancele quando quiser. |
+| Pro Vitalício | $9.99 uma vez | Todos os efeitos e controles, para sempre. Mostra um pequeno cartão de patrocinador. |
+| Pro Mensal | $1.99 / mês | Tudo, sem cartão de patrocinador. Cancele quando quiser. |
 
 Os preços aparecem na sua moeda local no pagamento.
 

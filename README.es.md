@@ -33,8 +33,8 @@ Una perilla estilo sintetizador define la forma de las esquinas, de cuadrada a p
 | Plan | Precio | Qué incluye |
 | --- | --- | --- |
 | Gratis | $0 | Spectrum Cycle y Matrix, después de una prueba de 7 días con todo. |
-| De por vida | $9.99 una vez | Todos los efectos y controles, para siempre. Muestra una pequeña tarjeta de patrocinador. |
-| Mensual | $1.99 / mes | Todo, sin tarjeta de patrocinador. Cancela cuando quieras. |
+| Pro De por vida | $9.99 una vez | Todos los efectos y controles, para siempre. Muestra una pequeña tarjeta de patrocinador. |
+| Pro Mensual | $1.99 / mes | Todo, sin tarjeta de patrocinador. Cancela cuando quieras. |
 
 Los precios se muestran en tu moneda local al pagar.
 
