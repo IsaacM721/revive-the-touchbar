@@ -85,12 +85,30 @@ private struct Claims: Codable {
     var promo: String?
 }
 
-// MARK: - Storage (Keychain first, so the trial survives deleting the app)
+// MARK: - Storage
 
+/// The license token and this Mac's ID, kept in the app's settings. Versions up to 1.2.0 kept them in the
+/// Keychain, but a Keychain entry belongs to the exact build that wrote it: any other build (a rebuild, a copy
+/// built from source) made macOS ask for the login password. Everything is free now, so nothing here is secret.
 private enum SecureStore {
     static let service = "com.isaac.rgbtouchbar"
+    private static let prefix = "store."
 
     static func read(_ account: String) -> String? {
+        let d = UserDefaults.standard
+        if let v = d.string(forKey: prefix + account) { return v }
+        // One-time move from the Keychain. Only a Developer ID build can read the old entry without a password
+        // prompt, so other builds skip it and start fresh.
+        guard isDeveloperIDSigned, let v = keychainRead(account) else { return nil }
+        d.set(v, forKey: prefix + account)
+        return v
+    }
+
+    static func write(_ account: String, _ value: String) {
+        UserDefaults.standard.set(value, forKey: prefix + account)
+    }
+
+    private static func keychainRead(_ account: String) -> String? {
         let q: [String: Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrService as String: service,
                                 kSecAttrAccount as String: account, kSecReturnData as String: true,
                                 kSecMatchLimit as String: kSecMatchLimitOne]
@@ -99,17 +117,20 @@ private enum SecureStore {
         return String(data: d, encoding: .utf8)
     }
 
-    static func write(_ account: String, _ value: String) {
-        let base: [String: Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrService as String: service,
-                                   kSecAttrAccount as String: account]
-        SecItemDelete(base as CFDictionary)
-        var add = base
-        add[kSecValueData as String] = Data(value.utf8)
-        SecItemAdd(add as CFDictionary, nil)
-    }
+    /// True when this copy carries a team ID (Developer ID signed), false for ad-hoc and unsigned builds.
+    private static let isDeveloperIDSigned: Bool = {
+        var code: SecCode?
+        var staticCode: SecStaticCode?
+        var info: CFDictionary?
+        guard SecCodeCopySelf([], &code) == errSecSuccess, let code,
+              SecCodeCopyStaticCode(code, [], &staticCode) == errSecSuccess, let staticCode,
+              SecCodeCopySigningInformation(staticCode, SecCSFlags(rawValue: kSecCSSigningInformation), &info) == errSecSuccess,
+              let dict = info as? [String: Any] else { return false }
+        return dict[kSecCodeInfoTeamIdentifier as String] != nil
+    }()
 }
 
-/// A random ID for this Mac, kept in the Keychain. The server counts distinct IDs per license (3 Macs max).
+/// A random ID for this Mac, kept with the license. The server counts distinct IDs per license (3 Macs max).
 private var deviceID: String {
     if let existing = SecureStore.read("deviceId"), !existing.isEmpty { return existing }
     let fresh = UUID().uuidString

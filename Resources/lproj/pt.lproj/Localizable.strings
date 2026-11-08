@@ -75,6 +75,13 @@
 "Add a lighting button to the Control Strip" = "Adicionar um botão de iluminação à Control Strip";
 "Turn lighting on or off" = "Ligar ou desligar a iluminação";
 "Open settings" = "Abrir configurações";
+"Show function keys" = "Mostrar teclas de função";
+"Slide for brightness" = "Deslize para o brilho";
+"Slide for volume" = "Deslize para o volume";
+"Slide on the Touch Bar to change brightness and volume" = "Deslize na Touch Bar para mudar o brilho e o volume";
+"Slide sideways over the lighting: the left half sets screen brightness, the right half sets volume." = "Deslize para os lados sobre a iluminação: a metade esquerda ajusta o brilho da tela e a direita, o volume.";
+"Show me on the Touch Bar" = "Mostre na Touch Bar";
+"Show the lighting" = "Mostrar a iluminação";
 "Keep the Touch Bar on" = "Manter a Touch Bar ligada";
 "Open at login" = "Abrir ao iniciar sessão";
 "Sponsored" = "Patrocinado";

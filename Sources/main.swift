@@ -59,6 +59,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         settings.$showClose.sink { [weak self] in self?.bar.setCloseVisible($0) }.store(in: &cancellables)
         settings.$showButtons.sink { [weak self] in self?.bar.setButtonsVisible($0) }.store(in: &cancellables)
         settings.$keepOn.sink { [weak self] in self?.bar.setKeepOnActive($0) }.store(in: &cancellables)
+        settings.$slideControls.sink { [weak self] in self?.bar.setSlidersEnabled($0) }.store(in: &cancellables)
+        NotificationCenter.default.addObserver(forName: .showSlideTip, object: nil, queue: .main) { [weak self] _ in
+            self?.bar.showSlideTip()
+        }
         // The display only stays awake while the lighting is on too, so turning the bar off lets the Mac sleep as usual.
         Publishers.CombineLatest(settings.$enabled, settings.$keepOn)
             .map { $0 && $1 }
@@ -394,7 +398,7 @@ if let out = argument(after: "--snapshot-ui-tall") {
     app.run()
 }
 
-// `--snapshot-bar <file.png> [keepon] [nobuttons]` captures the Touch Bar's own view: the effect with its controls, 1004pt wide on black.
+// `--snapshot-bar <file.png> [keepon] [nobuttons] [fnkeys] [slidetip] [slidelevel]` captures the Touch Bar's own view: the effect with its controls, 1004pt wide on black.
 if let out = argument(after: "--snapshot-bar") {
     let app = NSApplication.shared
     app.setActivationPolicy(.accessory)
@@ -402,6 +406,9 @@ if let out = argument(after: "--snapshot-bar") {
     let p = TouchBarPresenter()
     p.setKeepOnActive(flags.contains("keepon"))
     p.setButtonsVisible(!flags.contains("nobuttons"))
+    if flags.contains("fnkeys") { p.setShowingFunctionKeys(true, askPermission: false) }
+    if flags.contains("slidetip") { p.sliders.showTip(animated: false) }
+    if flags.contains("slidelevel") { p.sliders.previewLevel(.brightness, 0.7); p.sliders.previewLevel(.volume, 0.4) }
     let frame = NSRect(x: 40, y: 100, width: 1004, height: 30)
     let win = NSWindow(contentRect: frame, styleMask: [.borderless], backing: .buffered, defer: false)
     win.backgroundColor = .black

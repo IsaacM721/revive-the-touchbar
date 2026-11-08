@@ -75,6 +75,13 @@
 "Add a lighting button to the Control Strip" = "Control Strip में रोशनी का बटन जोड़ें";
 "Turn lighting on or off" = "रोशनी चालू या बंद करें";
 "Open settings" = "सेटिंग्स खोलें";
+"Show function keys" = "फ़ंक्शन कुंजियाँ दिखाएँ";
+"Slide for brightness" = "चमक के लिए स्लाइड करें";
+"Slide for volume" = "वॉल्यूम के लिए स्लाइड करें";
+"Slide on the Touch Bar to change brightness and volume" = "चमक और वॉल्यूम बदलने के लिए Touch Bar पर स्लाइड करें";
+"Slide sideways over the lighting: the left half sets screen brightness, the right half sets volume." = "लाइटिंग पर बगल की ओर स्लाइड करें: बायाँ आधा हिस्सा स्क्रीन की चमक और दायाँ आधा वॉल्यूम बदलता है।";
+"Show me on the Touch Bar" = "Touch Bar पर दिखाएँ";
+"Show the lighting" = "लाइटिंग दिखाएँ";
 "Keep the Touch Bar on" = "Touch Bar को चालू रखें";
 "Open at login" = "लॉगिन पर खोलें";
 "Sponsored" = "प्रायोजित";

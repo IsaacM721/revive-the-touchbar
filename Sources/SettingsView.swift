@@ -518,6 +518,18 @@ struct SettingsView: View {
             VStack(alignment: .leading, spacing: 12) {
                 Toggle("Show a close button on the Touch Bar", isOn: $s.showClose)
                 Toggle("Show shortcut buttons on the Touch Bar", isOn: $s.showButtons)
+                VStack(alignment: .leading, spacing: 4) {
+                    Toggle("Slide on the Touch Bar to change brightness and volume", isOn: $s.slideControls)
+                    Text("Slide sideways over the lighting: the left half sets screen brightness, the right half sets volume.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    if s.slideControls {
+                        Button("Show me on the Touch Bar") {
+                            NotificationCenter.default.post(name: .showSlideTip, object: nil)
+                        }
+                        .disabled(!s.enabled)
+                    }
+                }
                 Toggle("Add a lighting button to the Control Strip", isOn: $s.showStripButton)
                 VStack(alignment: .leading, spacing: 4) {
                     Toggle("Keep the Touch Bar on while you are away", isOn: $s.keepOn)

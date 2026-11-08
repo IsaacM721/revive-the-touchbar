@@ -75,6 +75,13 @@
 "Add a lighting button to the Control Strip" = "在控制条中添加灯光按钮";
 "Turn lighting on or off" = "开启或关闭灯光";
 "Open settings" = "打开设置";
+"Show function keys" = "显示功能键";
+"Slide for brightness" = "滑动调节亮度";
+"Slide for volume" = "滑动调节音量";
+"Slide on the Touch Bar to change brightness and volume" = "在触控栏上滑动以调节亮度和音量";
+"Slide sideways over the lighting: the left half sets screen brightness, the right half sets volume." = "在灯光上左右滑动：左半边调节屏幕亮度，右半边调节音量。";
+"Show me on the Touch Bar" = "在触控栏上演示";
+"Show the lighting" = "显示灯光";
 "Keep the Touch Bar on" = "保持触控栏常亮";
 "Open at login" = "登录时打开";
 "Sponsored" = "赞助";

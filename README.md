@@ -21,6 +21,7 @@ A menu bar app that turns your Touch Bar into a living light strip: 49 animation
 - 49 animations: ambient light, retro, gaming, productivity, memes, and your own.
 - New animations every week, delivered to the app.
 - Your Text and Your GIF on the bar.
+- An **fn** button for F1–F12, and invisible sliders: slide over the lighting for screen brightness (left) and volume (right).
 - Speed, brightness, color, and a hardware-style knob for the corner shape. Save looks as presets.
 
 ## Get started

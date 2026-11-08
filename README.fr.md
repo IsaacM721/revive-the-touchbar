@@ -21,6 +21,7 @@ Une app de barre des menus qui transforme votre Touch Bar en bande lumineuse viv
 - 49 animations : lumière d’ambiance, rétro, jeu, productivité, mèmes et les vôtres.
 - De nouvelles animations chaque semaine, directement dans l’app.
 - Votre texte et votre GIF sur la barre.
+- Un bouton **fn** pour F1–F12 et des curseurs invisibles : glissez sur l’éclairage pour la luminosité de l’écran (à gauche) et le volume (à droite).
 - Vitesse, luminosité, couleur et un bouton façon matériel pour la forme des coins. Enregistrez vos réglages en préréglages.
 
 ## Pour commencer

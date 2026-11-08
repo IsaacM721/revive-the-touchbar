@@ -60,6 +60,8 @@ final class Settings: ObservableObject {
     @Published var showStripButton: Bool { didSet { d.set(showStripButton, forKey: "showStripButton") } }
     /// Stops the display from dimming or sleeping while the lighting is on, so the Touch Bar stays lit with nobody there.
     @Published var keepOn: Bool { didSet { d.set(keepOn, forKey: "keepOn") } }
+    /// Slide on the bar's left half for screen brightness, right half for volume.
+    @Published var slideControls: Bool { didSet { d.set(slideControls, forKey: "slideControls") } }
     /// Also show the app in the Dock (and the app switcher). The menu bar icon is always there.
     @Published var showInDock: Bool { didSet { d.set(showInDock, forKey: "showInDock") } }
     /// 0 = square corners, 1 = full pill.
@@ -90,6 +92,7 @@ final class Settings: ObservableObject {
         showButtons = d.object(forKey: "showButtons") as? Bool ?? true
         showStripButton = d.object(forKey: "showStripButton") as? Bool ?? true
         keepOn = d.object(forKey: "keepOn") as? Bool ?? false   // off until chosen: it costs battery
+        slideControls = d.object(forKey: "slideControls") as? Bool ?? true
         showInDock = d.object(forKey: "showInDock") as? Bool ?? true
         cornerFraction = d.object(forKey: "cornerFraction") as? Double ?? 1
         angle = d.object(forKey: "angle") as? Double ?? 90

@@ -21,6 +21,7 @@ Um app da barra de menus que transforma sua Touch Bar em uma faixa de luz viva: 
 - 49 animações: luz ambiente, retrô, games, produtividade, memes e as suas.
 - Animações novas toda semana, direto no app.
 - Seu texto e seu GIF na barra.
+- Um botão **fn** para F1–F12 e controles invisíveis: deslize sobre a iluminação para o brilho da tela (esquerda) e o volume (direita).
 - Velocidade, brilho, cor e um botão giratório estilo hardware para o formato dos cantos. Salve visuais como predefinições.
 
 ## Comece
