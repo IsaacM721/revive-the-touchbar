@@ -27,4 +27,4 @@ body:
       description: In the menu bar, choose Revive the Touchbar, then About.
   - type: markdown
     attributes:
-      value: Please don't paste license keys or payment details here. Email support instead.
+      value: Please don't paste license keys here. Email support instead.

@@ -4,45 +4,43 @@ Lire en: [English](README.md) · [Español](README.es.md) · [Português (Brasil
 
 # Revive the Touchbar
 
-**Éclairage RGB pour la Touch Bar du MacBook Pro.**
+**Éclairage RGB pour la Touch Bar du MacBook Pro. Gratuit et open source.**
 
-Une app de barre des menus qui transforme votre Touch Bar en bandeau lumineux vivant. Vagues arc-en-ciel, respiration néon, code qui tombe et plus, réglés avec un vrai bouton.
+Une app de barre des menus qui transforme votre Touch Bar en bande lumineuse vivante : 49 animations sur six étagères, de nouvelles animations chaque semaine, et vos propres textes et GIF.
 
-<p align="center"><a href="https://revivethetouchbar.com/?lang=fr"><b>Télécharger pour Mac</b></a> &nbsp;·&nbsp; <a href="https://revivethetouchbar.com/?lang=fr">Site web</a></p>
+<p align="center"><a href="https://revivethetouchbar.com"><b>Télécharger pour Mac</b></a> &nbsp;·&nbsp; <a href="https://revivethetouchbar.com">Site web</a></p>
 
-## Voyez-le bouger
+## En mouvement
 
-<p align="center"><img src="assets/hero.gif" alt="Voyez-le bouger" width="720"></p>
+<p align="center"><img src="assets/hero.gif" alt="" width="720"></p>
 
-Dix effets, générés par le même moteur que l'app. [Voir la démo complète (MP4)](assets/demo-all-effects.mp4)
+[Voir la démo complète (MP4)](assets/demo-all-effects.mp4)
 
-## Dix effets
+## Ce qu’il contient
 
-Spectrum Cycle et Matrix sont gratuits. Les autres se débloquent avec une licence.
-
-`Rainbow Wave` · `Spectrum Cycle` · `Breathing` · `Neon Breath` · `Heartbeat` · `Scanner` · `Inferno` · `Matrix` · `Starfield` · `Solid`
-
-## Réglez-le à la main
-
-Un bouton façon synthétiseur règle la forme des coins, du carré à la pilule complète. Des curseurs contrôlent la vitesse, la luminosité, la couleur et la largeur. Enregistrez vos favoris en préréglages et changez depuis la barre des menus.
-
-<p align="center"><img src="assets/settings-effects-fr.webp" alt="" width="420"> <img src="assets/settings-tuning-fr.webp" alt="" width="420"></p>
-
-## Formules
-
-| Formule | Prix | Ce que vous obtenez |
-| --- | --- | --- |
-| Gratuit | 0 $ | Spectrum Cycle et Matrix, après un essai de 7 jours de tout. |
-| Pro À vie | $9.99 une fois | Tous les effets et tous les réglages, pour toujours. Affiche une petite carte de sponsor. |
-| Pro Mensuel | $1.99 / mois | Tout, sans carte de sponsor. Résiliable à tout moment. |
-
-Les prix s'affichent dans votre devise locale au paiement.
+- 49 animations : lumière d’ambiance, rétro, jeu, productivité, mèmes et les vôtres.
+- De nouvelles animations chaque semaine, directement dans l’app.
+- Votre texte et votre GIF sur la barre.
+- Vitesse, luminosité, couleur et un bouton façon matériel pour la forme des coins. Enregistrez vos réglages en préréglages.
 
 ## Pour commencer
 
-1. Téléchargez l'app sur [revivethetouchbar.com](https://revivethetouchbar.com/?lang=fr).
+1. Téléchargez l’app sur [revivethetouchbar.com](https://revivethetouchbar.com).
 2. Ouvrez le DMG et glissez **Revive the Touchbar** dans Applications.
-3. Lancez-la. Elle vit dans la barre des menus ; ouvrez Réglages pour choisir un effet.
+3. Lancez-la. Elle vit dans la barre des menus ; ouvrez les Réglages pour choisir une animation.
+
+## Compiler depuis les sources
+
+Il vous faut Xcode ou les Command Line Tools (`xcode-select --install`).
+
+```sh
+git clone https://github.com/IsaacM721/revive-the-touchbar.git
+cd revive-the-touchbar
+./build.sh
+open "build/Revive the Touchbar.app"
+```
+
+La compilation est universelle (Apple silicon et Intel) et signée ad hoc. Le moteur d’animation est en Swift pur ; `tools/effectlab/run.sh` rend et mesure chaque animation sans l’app.
 
 ## Configuration requise
 
@@ -51,24 +49,22 @@ Les prix s'affichent dans votre devise locale au paiement.
 
 ## Questions
 
-**Pourquoi n'est-elle pas sur le Mac App Store ?**
+**Pourquoi n’est-elle pas sur le Mac App Store ?**
 
-Elle affiche sa propre Touch Bar grâce à une fonction système qu'Apple ne propose pas dans ses outils publics pour développeurs ; elle est donc distribuée directement. L'app est signée et notariée par Apple.
+Elle affiche sa propre Touch Bar grâce à une fonction du système qu’Apple ne propose pas dans ses outils publics pour développeurs ; elle est donc distribuée directement. La version du site est signée et notariée par Apple.
 
-**Puis-je l'éteindre ?**
+**Puis-je l’éteindre ?**
 
-Oui. Utilisez l'interrupteur Lighting de l'icône dans la barre des menus, et votre Touch Bar redevient normale.
+Oui. Utilisez l’interrupteur Éclairage dans le menu de la barre, et votre Touch Bar redevient normale.
 
-**Comment résilier l'abonnement mensuel ?**
+## Contribuer
 
-Ouvrez Réglages et choisissez Manage Subscription. Vous gardez l'accès jusqu'à la fin de la période.
+Les issues et pull requests sont bienvenues. Lisez d’abord [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Aide et retours
+## Licence
 
-Un bug ou une idée d'effet ? [Ouvrez un ticket](../../issues/new/choose), lancez une [discussion](../../discussions) ou écrivez à [isaacmendezrosario@icloud.com](mailto:isaacmendezrosario@icloud.com).
+MIT. Voir [LICENSE](LICENSE). Revive the Touchbar est un projet indépendant, ni affilié ni approuvé par Apple Inc. MacBook Pro et Touch Bar sont des marques d’Apple Inc.
 
-Si l'app vous plaît, une étoile aide d'autres personnes à la trouver.
+## Aide
 
----
-
-<sub>Revive the Touchbar est un produit indépendant, non affilié à Apple Inc. ni approuvé par elle. MacBook Pro et Touch Bar sont des marques d'Apple Inc. Ce dépôt contient la page publique, les médias et le suivi des tickets ; le code de l'app est fermé.</sub>
+Bugs et idées : [ouvrez une issue](../../issues/new/choose). Problèmes de sécurité : voir [SECURITY.md](SECURITY.md).

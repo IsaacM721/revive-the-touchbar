@@ -4,45 +4,43 @@ Read this in: **English** · [Español](README.es.md) · [Português (Brasil)](R
 
 # Revive the Touchbar
 
-**RGB lighting for the MacBook Pro Touch Bar.**
+**RGB lighting for the MacBook Pro Touch Bar. Free and open source.**
 
-A menu bar app that turns your Touch Bar into a living light strip. Rainbow waves, neon breathing, falling code and more, tuned with a real knob.
+A menu bar app that turns your Touch Bar into a living light strip: 49 animations on six shelves, new animation drops every week, and your own text and GIFs.
 
 <p align="center"><a href="https://revivethetouchbar.com"><b>Download for Mac</b></a> &nbsp;·&nbsp; <a href="https://revivethetouchbar.com">Website</a></p>
 
 ## See it move
 
-<p align="center"><img src="assets/hero.gif" alt="See it move" width="720"></p>
+<p align="center"><img src="assets/hero.gif" alt="" width="720"></p>
 
-Ten effects, rendered by the same engine the app uses. [Watch the full demo (MP4)](assets/demo-all-effects.mp4)
+[Watch the full demo (MP4)](assets/demo-all-effects.mp4)
 
-## Ten effects
+## What's inside
 
-Spectrum Cycle and Matrix are free. The rest unlock with a license.
-
-`Rainbow Wave` · `Spectrum Cycle` · `Breathing` · `Neon Breath` · `Heartbeat` · `Scanner` · `Inferno` · `Matrix` · `Starfield` · `Solid`
-
-## Tune it by hand
-
-A synth-style knob sets the corner shape from square to full pill. Sliders control speed, brightness, color, and width. Save your favorites as presets and switch from the menu bar.
-
-<p align="center"><img src="assets/settings-effects.webp" alt="" width="420"> <img src="assets/settings-tuning.webp" alt="" width="420"></p>
-
-## Plans
-
-| Plan | Price | What you get |
-| --- | --- | --- |
-| Free | $0 | Spectrum Cycle and Matrix, after a 7-day trial of everything. |
-| Pro Lifetime | $9.99 once | Every effect and every control, forever. Shows a small sponsor card. |
-| Pro Monthly | $1.99 / month | Everything, no sponsor card. Cancel any time. |
-
-Prices are shown in your local currency at checkout.
+- 49 animations: ambient light, retro, gaming, productivity, memes, and your own.
+- New animations every week, delivered to the app.
+- Your Text and Your GIF on the bar.
+- Speed, brightness, color, and a hardware-style knob for the corner shape. Save looks as presets.
 
 ## Get started
 
 1. Download the app from [revivethetouchbar.com](https://revivethetouchbar.com).
 2. Open the DMG and drag **Revive the Touchbar** to Applications.
-3. Launch it. It lives in your menu bar; open Settings to pick an effect.
+3. Launch it. It lives in your menu bar; open Settings to pick an animation.
+
+## Build from source
+
+You need Xcode or the Command Line Tools (`xcode-select --install`).
+
+```sh
+git clone https://github.com/IsaacM721/revive-the-touchbar.git
+cd revive-the-touchbar
+./build.sh
+open "build/Revive the Touchbar.app"
+```
+
+The build is universal (Apple silicon and Intel) and ad-hoc signed. The animation engine is plain Swift; `tools/effectlab/run.sh` renders and benchmarks every animation without the app.
 
 ## Requirements
 
@@ -53,22 +51,20 @@ Prices are shown in your local currency at checkout.
 
 **Why isn't it on the Mac App Store?**
 
-It shows its own Touch Bar using a system feature Apple doesn't offer through its public developer tools, so it is distributed directly. The app is signed and notarized by Apple.
+It shows its own Touch Bar using a system feature Apple doesn't offer through its public developer tools, so it is distributed directly. The release on the website is signed and notarized by Apple.
 
 **Can I turn it off?**
 
 Yes. Use the Lighting switch in the menu bar item, and your Touch Bar goes back to normal.
 
-**How do I cancel Monthly?**
+## Contributing
 
-Open Settings and choose Manage Subscription. You keep access until the period ends.
+Issues and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
-## Help and feedback
+## License
 
-Found a bug or want an effect? [Open an issue](../../issues/new/choose), start a [discussion](../../discussions), or email [isaacmendezrosario@icloud.com](mailto:isaacmendezrosario@icloud.com).
+MIT. See [LICENSE](LICENSE). Revive the Touchbar is an independent project, not affiliated with or endorsed by Apple Inc. MacBook Pro and Touch Bar are trademarks of Apple Inc.
 
-If you like it, a star helps other people find it.
+## Help
 
----
-
-<sub>Revive the Touchbar is an independent product and is not affiliated with or endorsed by Apple Inc. MacBook Pro and Touch Bar are trademarks of Apple Inc. This repository holds the public page, media, and issue tracker; the app's source code is closed.</sub>
+Bugs and ideas: [open an issue](../../issues/new/choose). Security problems: see [SECURITY.md](SECURITY.md).

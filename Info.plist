@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleIdentifier</key><string>com.isaac.rgbtouchbar</string>
+  <key>CFBundleName</key><string>Revive the Touchbar</string>
+  <key>CFBundleDisplayName</key><string>Revive the Touchbar</string>
+  <key>CFBundleExecutable</key><string>ReviveTheTouchbar</string>
+  <key>CFBundleIconFile</key><string>AppIcon</string>
+  <key>CFBundleDevelopmentRegion</key><string>en</string>
+  <key>CFBundleLocalizations</key>
+  <array><string>en</string><string>es</string><string>pt</string><string>fr</string><string>hi</string><string>zh-Hans</string></array>
+  <key>CFBundleURLTypes</key>
+  <array><dict>
+    <key>CFBundleURLName</key><string>com.isaac.rgbtouchbar.activate</string>
+    <key>CFBundleURLSchemes</key><array><string>revive</string></array>
+  </dict></array>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>1.2.0</string>
+  <key>CFBundleVersion</key><string>3</string>
+  <key>LSMinimumSystemVersion</key><string>13.0</string>
+  <key>LSUIElement</key><true/>
+  <key>NSHighResolutionCapable</key><true/>
+</dict>
+</plist>
